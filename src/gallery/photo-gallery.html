@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shree Alakshendra Inter College  - Photo Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Shree Alakshendra Inter College  - Photo Gallery">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="/src/assets/Shared/css/jsGallery.css">
+    
+</head>
+<body class="dark">
+    <div id="jsGallery" style="display: none;" data-title="Shree Alkshendra Inter College - PHOTO GALLERY">
+
+        <span data-album-name="School" data-src="/src/photos/photo1.jpg" data-thumbnail="/photo1.jpg" data-alt="School 1"></span>
+        <span data-album-name="School" data-src="/src/photos/photo2.jpg" data-thumbnail="/photo2.jpg" data-alt="School6"></span>
+        <span data-album-name="School" data-src="/src/photos/photo3.jpg" data-thumbnail="/photo3.jpg" data-alt="School4"></span>
+        <span data-album-name="School" data-src="/src/photos/photo4.jpg" data-thumbnail="/photo4.jpg" data-alt="School2"></span>
+        <span data-album-name="School" data-src="/src/photos/photo5.jpg" data-thumbnail="/photo5.jpg" data-alt="School3"></span>
+        
+                
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/src/assets/Shared/js/jsGallery.js"></script>
+    <script>
+        var gal = $('#jsGallery').jsGallery({
+            showAlbums: true,
+            connectAlbums: true
+        });
+        gal.jsGallery('show');
+    </script>
+</body>
+</html>

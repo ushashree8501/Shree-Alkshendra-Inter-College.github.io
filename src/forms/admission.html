@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <style type="text/css">
+        :root {
+            --primary-color: #5F0804;
+            --secondary-color: #FCC741;
+            --tertiary-color: #ffffff;
+        }
+    </style>
+    <link rel="stylesheet" href="/src/assets/Shared/css/shared-forms.css" />
+</head>
+<body>
+    <div class="container header">
+        <div class="text-center">
+            <a class="logo" href="/">
+                    <img src="https://newcdn.edumis.in/docs/common/default-logo.png" style="max-height:60px;" class="mb-2" />
+                <h1> Shree Alkshendra Inter College </h1>
+            </a>
+            <p>
+                Bhinga, Shravasti
+                Shrawasti, Uttar Pradesh (271831)<br />
+                <i class="fa fa-envelope-o fa-fw"></i>&nbsp;j08ppandey@gmail.com &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-phone fa-fw"></i>+91 94159 15628
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        
+
+
+<div class="form-wrapper">
+    <form method="post" action="/forms/admission" enctype="multipart/form-data" autocomplete="off">
+        <input Value="True" data-val="true" data-val-required="Required to accept Terms &amp; Conditions" id="IsTermsAccepted" name="IsTermsAccepted" type="hidden" value="" />
+        <div class="section-title rounded">
+            Admission Details
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="Session">Session</label>
+                        <input Value="2022-2023" class="form-control" data-val="true" data-val-required="The Session field is required." id="Session" name="Session" readonly="True" type="text" value="" />
+                    </div>
+                </div>
+<input Value="na" id="GlobalStudentId" name="GlobalStudentId" type="hidden" value="" />                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="ClassId">Class</label>
+                        <select class="form-control" data-val="true" data-val-required="The ClassId field is required." id="ClassId" name="ClassId"><option value="">--Class--</option>
+</select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title rounded">
+            Student Information
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="StudentName">Student Name</label>
+                        <input class="form-control" data-val="true" data-val-length="Required." data-val-length-max="50" data-val-required="Student Name Required" id="StudentName" name="StudentName" placeholder="First Name" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="MobileNumber">Mobile Number</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid mobile number" data-val-regex-pattern="^[6-9][0-9]{9}$" data-val-required="Moble Number is Required" id="MobileNumber" name="MobileNumber" placeholder="Mobile Number" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input class="form-control" data-val="true" data-val-email="E-mail is not valid" data-val-length="255 chars max" data-val-length-max="255" data-val-required="Email is Required" id="Email" name="Email" placeholder="Email" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="Gender">Gender</label>
+                        <select class="form-control" data-val="true" data-val-required="Gender Required" id="Gender" name="Gender"><option value="">--Gender--</option>
+<option selected="selected" value="0">Male</option>
+<option value="1">Female</option>
+<option value="2">Other</option>
+</select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="Category">Category</label>
+                        <select class="form-control" data-val="true" data-val-required="Category Required" id="Category" name="Category"><option value="">--Category--</option>
+<option value="07d1679c-dbf3-11ec-b62f-d09466536334">General</option>
+<option value="07d166b8-dbf3-11ec-b62f-d09466536334">Other Backward Classes (OBC)</option>
+<option value="07d1658c-dbf3-11ec-b62f-d09466536334">Scheduled Casts (SC)</option>
+<option value="07d06a61-dbf3-11ec-b62f-d09466536334">Scheduled Tribes (ST)</option>
+</select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="DOB">Date of Birth</label>
+                        <div class="input-group">
+                            <input class="form-control" data-val="true" data-val-required="DOB Required" id="DOB" name="DOB" placeholder="Date of Birth" type="text" value="" />
+                            <div class="input-group-append">
+                                <span class="input-group-text"><img src="/assets/shared/img/calendar-alt-regular.svg" style="height:16px; width:16px;" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="Language">Mother Tongue</label>
+                        <select class="form-control" data-val="true" data-val-required="Language Required" id="Language" name="Language"><option value="">--Language--</option>
+<option selected="selected" value="0">English</option>
+<option value="1">Hindi</option>
+<option value="2">Assamese</option>
+<option value="3">Bengali</option>
+<option value="4">Bodo</option>
+<option value="5">Dogri</option>
+<option value="6">Gujarati</option>
+<option value="7">Kannada</option>
+<option value="8">Kashmiri</option>
+<option value="9">Konkani</option>
+<option value="10">Maithili</option>
+<option value="11">Malayalam</option>
+<option value="12">Meitei</option>
+<option value="13">Marathi</option>
+<option value="14">Nepali</option>
+<option value="15">Odia</option>
+<option value="16">Punjabi</option>
+<option value="17">Sanskrit</option>
+<option value="18">Santali</option>
+<option value="19">Sindhi</option>
+<option value="20">Tamil</option>
+<option value="21">Telugu</option>
+<option value="22">Urdu</option>
+</select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="BirthPlace">Birthplace</label>
+                        <input class="form-control" data-val="true" data-val-length="less than 50 characters allowed in birthplace" data-val-length-max="50" data-val-required="Birth Place Required" id="BirthPlace" name="BirthPlace" placeholder="Birthplace" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="BloodGroup">Blood Group</label>
+                        <select class="form-control" data-val="true" data-val-required="Blood Group Required" id="BloodGroup" name="BloodGroup"><option value="">--Blood Group--</option>
+<option selected="selected" value="0">A+</option>
+<option value="1">A-</option>
+<option value="2">B+</option>
+<option value="3">B-</option>
+<option value="4">AB+</option>
+<option value="5">AB-</option>
+<option value="6">O+</option>
+<option value="7">O-</option>
+<option value="8">Unknown</option>
+</select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="Religion">Religion</label>
+                        <select class="form-control" data-val="true" data-val-required="Religion Required" id="Religion" name="Religion" placeholder="Religion"><option value="">--Select Religion--</option>
+<option selected="selected" value="0">Hinduism</option>
+<option value="1">Islam</option>
+<option value="2">Christianity</option>
+<option value="3">Sikhism</option>
+<option value="4">Buddhism</option>
+<option value="5">Jainism</option>
+<option value="6">Zoroastrianism</option>
+<option value="7">Other</option>
+</select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="Nationality">Nationality</label>
+                        <select class="form-control" data-val="true" data-val-required="Nationality Required" id="Nationality" name="Nationality" placeholder="Nationality"><option value="">--Select Nationality--</option>
+<option selected="selected" value="0">American</option>
+<option value="1">Australian</option>
+<option value="2">Austrian</option>
+<option value="3">Belarusian</option>
+<option value="4">Belgian</option>
+<option value="5">Brazilian</option>
+<option value="6">British</option>
+<option value="7">Bulgarian</option>
+<option value="8">Canadian</option>
+<option value="9">Chinese</option>
+<option value="10">Czech</option>
+<option value="11">Danish</option>
+<option value="12">Dutch</option>
+<option value="13">Egyptian</option>
+<option value="14">Estonian</option>
+<option value="15">Finnish</option>
+<option value="16">French</option>
+<option value="17">Georgian</option>
+<option value="18">German</option>
+<option value="19">Greek</option>
+<option value="20">Hungarian</option>
+<option value="21">Indian</option>
+<option value="22">Irish</option>
+<option value="23">Israeli</option>
+<option value="24">Italian</option>
+<option value="25">Japanese</option>
+<option value="26">Korean</option>
+<option value="27">Latvian</option>
+<option value="28">Lithuanian</option>
+<option value="29">Mexican</option>
+<option value="30">New Zealander</option>
+<option value="31">Norwegian</option>
+<option value="32">Polish</option>
+<option value="33">Portuguese</option>
+<option value="34">Romanian</option>
+<option value="35">Russian</option>
+<option value="36">Scottish</option>
+<option value="37">Slovakian</option>
+<option value="38">South African</option>
+<option value="39">Spanish</option>
+<option value="40">Swedish</option>
+<option value="41">Swiss</option>
+<option value="42">Turkish</option>
+<option value="43">Ukrainian</option>
+<option value="44">Welsh</option>
+</select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="AadharNumber">Aadhar Number</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid aadhar card number" data-val-regex-pattern="^\d{4}\s\d{4}\s\d{4}$" id="AadharNumber" name="AadharNumber" placeholder="XXXX XXXX XXXX" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title rounded">
+            Previous School Information
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="PreviousSchoolName">School Name</label>
+                        <input class="form-control" data-val="true" data-val-required="Previous school name is required." id="PreviousSchoolName" name="PreviousSchoolName" placeholder="Previous School Name" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="PreviousClass">Class</label>
+                        <input class="form-control" data-val="true" data-val-required="Previous class is required" id="PreviousClass" name="PreviousClass" placeholder="Previous Class" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="PreviousClassPercentage">Obtained Percentage</label>
+                        <input class="form-control" data-val="true" data-val-number="The field PreviousClassPercentage must be a number." data-val-range="Invalid percentage" data-val-range-max="100" data-val-range-min="0" data-val-required="Precentage in previous class is required." id="PreviousClassPercentage" name="PreviousClassPercentage" placeholder="Percentage in Previous Class" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="PreviousClassYOP">Year of Passing</label>
+                        <input class="form-control" data-val="true" data-val-required="Previous class passing year is required." id="PreviousClassYOP" name="PreviousClassYOP" placeholder="Previous Class YOP" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title rounded">
+            Permanent Address
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="PermanentAddressLine1">Address Line 1</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Permanent Address Line 1 is Required" id="PermanentAddressLine1" name="PermanentAddressLine1" placeholder="Address Line 1" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="PermanentAddressLine2">Address Line 2</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Permanent Address Line 2 is Required" id="PermanentAddressLine2" name="PermanentAddressLine2" placeholder="Address Line 2" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="PermanentAddressCity">City</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Permanent Address City is Required" id="PermanentAddressCity" name="PermanentAddressCity" placeholder="City" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="PermanentAddressState">State</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Permanent Address State is Required" id="PermanentAddressState" name="PermanentAddressState" placeholder="State" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="PermanentAddressPincode">Pincode</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid pincode" data-val-regex-pattern="^[1-9]\d{5}$" data-val-required="Permanent Address Pincode is Required" id="PermanentAddressPincode" name="PermanentAddressPincode" placeholder="Pincode" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title rounded">
+            Communication Address
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="CommunicationAddressLine1">Address Line 1</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Communication Address Line 1 is Required" id="CommunicationAddressLine1" name="CommunicationAddressLine1" placeholder="Address Line 1" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="CommunicationAddressLine2">Address Line 2</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Communication Address Line 2 is Required" id="CommunicationAddressLine2" name="CommunicationAddressLine2" placeholder="Address Line 2" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="CommunicationAddressCity">City</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Communication Address City is Required" id="CommunicationAddressCity" name="CommunicationAddressCity" placeholder="City" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="CommunicationAddressState">State</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-regex="Only alphabets allowed." data-val-regex-pattern="^[a-zA-Z ]+$" data-val-required="Communication Address State is Required" id="CommunicationAddressState" name="CommunicationAddressState" placeholder="State" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="CommunicationAddressPincode">Pincode</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid pincode" data-val-regex-pattern="^[1-9]\d{5}$" data-val-required="Communication Address Pincode is Required" id="CommunicationAddressPincode" name="CommunicationAddressPincode" placeholder="Pincode" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title rounded">
+            Father's Information
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="FathersName">Name</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Father&#39;s Name is Required" id="FathersName" name="FathersName" placeholder="Name" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="FathersMobileNumber">Mobile Number</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid mobile number" data-val-regex-pattern="^[6-9][0-9]{9}$" data-val-required="Father&#39;s Mobile Number is Required" id="FathersMobileNumber" name="FathersMobileNumber" placeholder="Mobile Number" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="FathersEmail">Email</label>
+                        <input class="form-control" data-val="true" data-val-email="Father&#39;s E-mail is not valid" data-val-required="Father&#39;s Email is Required" id="FathersEmail" name="FathersEmail" placeholder="Email" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="FathersQualification">Qualification</label>
+                        <input class="form-control" id="FathersQualification" name="FathersQualification" placeholder="Qualification" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="FathersPAN">PAN</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid PAN" data-val-regex-pattern="^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}$" id="FathersPAN" name="FathersPAN" placeholder="Pan Card Number" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="FathersAadhar">Aadhar Number</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid aadhar card number" data-val-regex-pattern="^\d{4}\s\d{4}\s\d{4}$" id="FathersAadhar" name="FathersAadhar" placeholder="XXXX XXXX XXXX" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="section-title rounded">
+            Mother's Information
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="MothersName">Name</label>
+                        <input class="form-control" data-val="true" data-val-length="50 chars max" data-val-length-max="50" data-val-required="Mother&#39;s Name is Required" id="MothersName" name="MothersName" placeholder="Name" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="MothersMobileNumber">Mobile Number</label>
+                        <input class="form-control" data-val="true" data-val-regex="Mother&#39;s Mobile Number is Invalid" data-val-regex-pattern="^[6-9][0-9]{9}$" data-val-required="Mother&#39;s Mobile Number is Required" id="MothersMobileNumber" name="MothersMobileNumber" placeholder="Mobile Number" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="MothersEmail">Email</label>
+                        <input class="form-control" data-val="true" data-val-email="Mother&#39;s E-mail is not valid" data-val-required="Mother&#39;s Email is Required" id="MothersEmail" name="MothersEmail" placeholder="Email" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="MothersQualification">Qualification</label>
+                        <input class="form-control" id="MothersQualification" name="MothersQualification" placeholder="Qualification" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="MothersPAN">PAN</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid PAN" data-val-regex-pattern="^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}$" id="MothersPAN" name="MothersPAN" placeholder="Pan Card Number" type="text" value="" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="MothersAadhar">Aadhar Number</label>
+                        <input class="form-control" data-val="true" data-val-regex="Invalid aadhar card number" data-val-regex-pattern="^\d{4}\s\d{4}\s\d{4}$" id="MothersAadhar" name="MothersAadhar" placeholder="XXXX XXXX XXXX" type="text" value="" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <div class="section-title rounded">
+                Bank Account Details
+            </div>
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="BankName">Bank Name</label>
+                            <input class="form-control" data-val="true" data-val-required="Bank Name is Required." id="BankName" name="BankName" placeholder="Bank Name" type="text" value="" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="BankBranch">Bank Branch</label>
+                            <input class="form-control" data-val="true" data-val-required="Bank Branch Name is Required." id="BankBranch" name="BankBranch" placeholder="Bank Branch" type="text" value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="BankBranchIFSC">IFSC Code</label>
+                            <input class="form-control" data-val="true" data-val-regex="Invalid IFSC Code" data-val-regex-pattern="[A-Za-z0-9]{11}" data-val-required="IFSC Code is Required." id="BankBranchIFSC" name="BankBranchIFSC" placeholder="IFSC" type="text" value="" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="BankAccountNumber">Account Number</label>
+                            <input class="form-control" data-val="true" data-val-required="Account Number is Required." id="BankAccountNumber" name="BankAccountNumber" placeholder="Account Number" type="text" value="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="section-title rounded">
+            Documents Upload
+        </div>
+        <div class="section-body">
+            <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="TransferCertificate">Transfer Certificate</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-allowedfiletypes="Only pdf allowed for TC" data-val-allowedfiletypes-mimetypes="application/pdf" data-val-maxfilesize="schoolwebsite.models.formsadmission.transfercertificate:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Transfer Certificate is required." id="TransferCertificate" name="TransferCertificate" type="file" value="" />                                <label class="file-input-label" for="TransferCertificate">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="Photo">Photo</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-imagefile="Only jpg files are allowed for Photo" data-val-maxfilesize="schoolwebsite.models.formsadmission.photo:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Photo is required" id="Photo" name="Photo" type="file" value="" />                                <label class="file-input-label" for="Photo">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="BirthCertificate">Birth Certificate</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-allowedfiletypes="Only pdf allowed for Birth Certificate" data-val-allowedfiletypes-mimetypes="application/pdf" data-val-maxfilesize="schoolwebsite.models.formsadmission.birthcertificate:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Birth certificate is required" id="BirthCertificate" name="BirthCertificate" type="file" value="" />                                <label class="file-input-label" for="BirthCertificate">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="AddressProof">Address Proof</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-allowedfiletypes="Only pdf allowed for Address Proof" data-val-allowedfiletypes-mimetypes="application/pdf" data-val-maxfilesize="schoolwebsite.models.formsadmission.addressproof:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Address proof is required." id="AddressProof" name="AddressProof" type="file" value="" />                                <label class="file-input-label" for="AddressProof">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="MinorityCertificate">Minority Certificate</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-allowedfiletypes="Only pdf allowed for Minority Certificate" data-val-allowedfiletypes-mimetypes="application/pdf" data-val-maxfilesize="schoolwebsite.models.formsadmission.minoritycertificate:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Minority certificate is required." id="MinorityCertificate" name="MinorityCertificate" type="file" value="" />                                <label class="file-input-label" for="MinorityCertificate">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="CharacterCertificate">Character Certificate</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-allowedfiletypes="Only pdf allowed for Character Certificate" data-val-allowedfiletypes-mimetypes="application/pdf" data-val-maxfilesize="schoolwebsite.models.formsadmission.charactercertificate:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Character certificate is required." id="CharacterCertificate" name="CharacterCertificate" type="file" value="" />                                <label class="file-input-label" for="CharacterCertificate">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="AnnualIncomeCertificate">Annual Income Certificate</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-allowedfiletypes="Only pdf allowed for Income Certificate" data-val-allowedfiletypes-mimetypes="application/pdf" data-val-maxfilesize="schoolwebsite.models.formsadmission.annualincomecertificate:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Annual income certificate is required." id="AnnualIncomeCertificate" name="AnnualIncomeCertificate" type="file" value="" />                                <label class="file-input-label" for="AnnualIncomeCertificate">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="PreviousClassCertificate">Previous Class Certificate</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-allowedfiletypes="Only pdf allowed for Previous Class Certificate" data-val-allowedfiletypes-mimetypes="application/pdf" data-val-maxfilesize="schoolwebsite.models.formsadmission.previousclasscertificate:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Previous class certificate is required." id="PreviousClassCertificate" name="PreviousClassCertificate" type="file" value="" />                                <label class="file-input-label" for="PreviousClassCertificate">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="RationCard">Ration Card</label>
+                            <div class="file-input">
+<input class="file-input-control" data-val="true" data-val-allowedfiletypes="Only pdf allowed for Ration Card" data-val-allowedfiletypes-mimetypes="application/pdf" data-val-maxfilesize="schoolwebsite.models.formsadmission.rationcard:maxfilesize:invalid" data-val-maxfilesize-allowedfilesize="2097152" data-val-required="Ration card is required." id="RationCard" name="RationCard" type="file" value="" />                                <label class="file-input-label" for="RationCard">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <b>Note:</b> Please type "NA" if Not Applicable.<br />
+            By submiting this form you agree to our <a href="/terms-and-contions">terms & conditions</a> and <a href="privacy-policy">privacy policy</a>.
+        </div>
+        <div class="form-group mt-2">
+            <input type="submit" value="Submit Now" class="btn btn-success btn-lg" />
+        </div>
+    </form>
+</div>
+    </div>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap&subset=devanagari" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.1/js/bootstrap.min.js"></script>
+    <script src="/assets/Shared/js/custom_validations.js"></script>
+    <div id="validationModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul id="errorsList">
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#DOB').datepicker({
+                dateFormat: 'dd/mm/yy',
+                autoclose: false
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('[name="BloodGroup"]').val("");
+	    $('[name="Gender"]').val("");
+            $('[name="Language"]').val("");
+            $('[name="Nationality"]').val("");
+            $('[name="Religion"]').val("");
+        });
+    </script>
+    <script>
+        $.each($("form"), function (index, value) {
+            $(this).submit(function (e) {
+                var isValid = $(this).valid();
+                if (!isValid) {
+                    try {
+                        var validator = $(this).validate();
+                        var errorsList = "";
+                        for (var i = 0; i < validator.errorList.length; i++) {
+                            errorsList = errorsList + "<li>" + validator.errorList[i].message + "</li>";
+                        }
+                        document.getElementById("errorsList").innerHTML = errorsList;
+                        $('#validationModal').modal('show');
+                    }
+                    catch (err) {
+                        alert(err);
+                    }
+                    finally {
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".file-input-control").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".file-input-label").addClass("selected").html(fileName);
+            });
+        });
+    </script>
+</body>
+</html>

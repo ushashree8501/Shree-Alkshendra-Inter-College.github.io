@@ -1,0 +1,210 @@
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
+
+ul#errorsList li {
+    color:var(--danger);
+}
+
+a:active, a:hover, a:active {
+    text-decoration: none !important;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: none;
+}
+
+.form-control.input-validation-error,
+.form-control.input-validation-error + div.input-group-append .input-group-text,
+.file-input .file-input-control.input-validation-error + label.file-input-label,
+.file-input .file-input-control.input-validation-error + label.file-input-label:after {
+    border-color: #ff4136;
+    box-shadow: none;
+}
+
+
+input.form-control, select.form-control {
+    height: 45px;
+}
+
+
+.file-input {
+    position: relative;
+}
+
+    .file-input .file-input-control,
+    .file-input .file-input-label {
+        box-sizing: border-box;
+        height: 50px !important;
+        line-height: 50px !important;
+        vertical-align: middle;
+        background-color: #fff !important;
+        border: 1px solid rgba(53, 53, 53, 0.1);
+        width: 100%;
+        outline: none;
+        color: #495057;
+    }
+
+
+    .file-input .file-input-control {
+        opacity: 0 !important;
+    }
+
+    .file-input .file-input-label {
+        margin-top: -64px;
+        padding-left: 15px !important;
+        cursor: pointer;
+        border-radius: .25rem;
+    }
+
+        .file-input .file-input-label:after {
+            position: absolute;
+            height: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            content: 'Browse';
+            top: 2px;
+            right: 0px;
+            border-left: 2px solid rgba(53, 53, 53, 0.1);
+            background-color: var(--secondary-color) !important;
+            color: white;
+            border-radius: .25rem;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+    body div.container div.form-wrapper {
+        padding: 40px;
+        margin-bottom: 20px;
+        border: 3px solid #eaeaea;
+        border-radius: 10px;
+    }
+
+        body div.container div.form-wrapper.career {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+
+
+
+
+h1 {
+    font-size: 25px;
+}
+
+div.section-title {
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+div.section-body {
+    padding: 20px;
+}
+
+
+
+
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+
+
+.toggle-input {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+    .toggle-input input[type="checkbox"],
+    .toggle-input input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+
+
+        .toggle-input input[type="checkbox"] + input[type="hidden"] + label:before,
+        .toggle-input input[type="radio"] + input[type="hidden"] + label:before {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #ccc;
+        }
+
+    .toggle-input input[type=radio] + input[type="hidden"] + label:before {
+        border-radius: 50%;
+    }
+
+
+
+
+    .toggle-input input[type="checkbox"]:checked + input[type="hidden"] + label:before,
+    .toggle-input input[type="radio"]:checked + input[type="hidden"] + label:before {
+        background-color: var(--secondary-color);
+    }
+
+
+    .toggle-input input:checked + input[type="hidden"] + label:after {
+        content: "";
+        position: absolute;
+        display: block;
+    }
+
+
+    .toggle-input input[type="checkbox"]:checked + input[type="hidden"] + label:after {
+        left: 10px;
+        top: 7px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .toggle-input input[type="radio"]:checked + input[type="hidden"] + label:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
